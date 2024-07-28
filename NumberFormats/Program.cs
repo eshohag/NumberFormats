@@ -15,8 +15,12 @@ namespace NumberFormats
             // Gets a NumberFormatInfo associated with the en-US culture.
             //NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;
             NumberFormatInfo nfi = new CultureInfo("bn-BD", false).NumberFormat;
+            nfi.CurrencyPositivePattern = 0; //Left Side Currency Symbol
+            //nfi.CurrencyPositivePattern = 1; //Right Side Currency Symbol
+
             // Displays a negative value with the default number of decimal digits (2).
-            var test = actualValue.ToString("C", nfi);
+            var test = actualValue.ToString("C", nfi);  //Right Side Currency Symbol
+
             Console.WriteLine(test);
 
             // Displays the same value with four decimal digits.
